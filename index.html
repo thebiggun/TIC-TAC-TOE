@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class = "bg-[#01161e]">
+    
+    <div class="text-center block py-5">
+        <h1 class = "text-4xl md:text-6xl font-extrabold text-[#124559] inline-block border-solid border-2 border-[#124559] px-2 py-2 rounded-xl bg-[#aec3b0] mx-3 mt-5">
+            Welcome to Tic Tac Toe!
+        </h1>
+    </div>
+    <div class="text-center md:flex md:justify-evenly">
+        <div class="mb-2 md:my-auto">
+            <h1 id= "player1" class="text-4xl w-[96%] text-center mx-[2%] md:text-5xl font-extrabold text-[#124559] inline-block border-solid border-2 border-[#124559] md:size-32 md:justify-center md:flex md:items-center rounded-xl bg-[#aec3b0]">
+                X
+            </h1>
+        </div>
+        <div class="gap-1 md:mx-3 inline-grid md:grid grid-flow-cols grid-cols-3 text-center md:gap-3">
+            <button id="0" class="font-extrabold bg-[#eff6e0] hover:bg-[#aec3b0] text-4xl md:text-6xl border-solid border-4 border-[#124559] rounded-xl size-24 md:size-40 butt"></button>
+            <button id="1" class="font-extrabold bg-[#eff6e0] hover:bg-[#aec3b0] text-4xl md:text-6xl border-solid border-4 border-[#124559] rounded-xl size-24 md:size-40 butt"></button>
+            <button id="2" class="font-extrabold bg-[#eff6e0] hover:bg-[#aec3b0] text-4xl md:text-6xl border-solid border-4 border-[#124559] rounded-xl size-24 md:size-40 butt"></button>
+            <button id="8" class="font-extrabold bg-[#eff6e0] hover:bg-[#aec3b0] text-4xl md:text-6xl border-solid border-4 border-[#124559] rounded-xl size-24 md:size-40 butt"></button>
+            <button id="3" class="font-extrabold bg-[#eff6e0] hover:bg-[#aec3b0] text-4xl md:text-6xl border-solid border-4 border-[#124559] rounded-xl size-24 md:size-40 butt"></button>
+            <button id="4" class="font-extrabold bg-[#eff6e0] hover:bg-[#aec3b0] text-4xl md:text-6xl border-solid border-4 border-[#124559] rounded-xl size-24 md:size-40 butt"></button>
+            <button id="5" class="font-extrabold bg-[#eff6e0] hover:bg-[#aec3b0] text-4xl md:text-6xl border-solid border-4 border-[#124559] rounded-xl size-24 md:size-40 butt"></button>
+            <button id="6" class="font-extrabold bg-[#eff6e0] hover:bg-[#aec3b0] text-4xl md:text-6xl border-solid border-4 border-[#124559] rounded-xl size-24 md:size-40 butt"></button>
+            <button id="7" class="font-extrabold bg-[#eff6e0] hover:bg-[#aec3b0] text-4xl md:text-6xl border-solid border-4 border-[#124559] rounded-xl size-24 md:size-40 butt"></button>
+        </div>
+        <div class="mt-2 md:my-auto">
+            <h1 id="player2" class="text-4xl w-[96%] text-center mx-[2%] md:text-5xl font-extrabold text-[#124559] inline-block border-solid border-2 border-[#124559] md:size-32 md:justify-center md:flex md:items-center rounded-xl bg-[#aec3b0]">
+                O
+            </h1>
+        </div>
+    </div>
+    <div class="text-center pt-3">
+        <button id="reset" class="text-3xl font-extrabold text-[#124559] inline-block hover:bg-[#01161e] hover:text-white hover:border-white border-solid border-2 border-[#124559] px-2 py-2 rounded-xl bg-[#aec3b0]">
+            Restart
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
