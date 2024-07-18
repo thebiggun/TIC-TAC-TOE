@@ -113,6 +113,7 @@ reset.addEventListener('click', () => {
         document.getElementById('player1').style.borderColor = "#124559";
         document.getElementById('player2').style.borderColor = "#FFD700";
     }
+    document.getElementById('Ban').style.display = "none";
 });
 
 
