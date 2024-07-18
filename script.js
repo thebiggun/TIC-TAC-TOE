@@ -3,7 +3,14 @@ let turn = 1;
 let turn0 = 1;
 let flag = 'f';
 let count=0;
+let newElement = document.getElementById('new');
+
 document.getElementById('player1').style.borderColor = "#FFD700";
+
+let wins = (comment) => {
+    document.getElementById('win').innerText = comment;
+    document.getElementById('Ban').style.display = 'flex';
+}
 
 let butt = document.querySelectorAll('.butt');
 for (let i of butt) {
@@ -50,6 +57,7 @@ const checkWin = () => {
                 document.getElementById('player2').style.color = "white";
                 document.getElementById('player1').style.borderColor = "#FFD700";
                 document.getElementById('player2').style.borderColor = "#124559";
+                wins("X WON THE GAME")
             }
             else {
                 document.getElementById('player2').style.backgroundColor = "green";
@@ -59,6 +67,7 @@ const checkWin = () => {
                 
                 document.getElementById('player2').style.borderColor = "#FFD700";
                 document.getElementById('player1').style.borderColor = "#124559";
+                wins("O WON THE GAME")
             }
             for (let j of butt) {
                 j.disabled = true;
@@ -72,6 +81,7 @@ const checkWin = () => {
         document.getElementById('player2').style.borderColor = "white";
         document.getElementById('player1').style.color = "white";
         document.getElementById('player2').style.color = "white";
+        wins("IT'S A TIE");
     }
 }
 let reset = document.querySelector('#reset');
@@ -103,4 +113,30 @@ reset.addEventListener('click', () => {
         document.getElementById('player1').style.borderColor = "#124559";
         document.getElementById('player2').style.borderColor = "#FFD700";
     }
+});
+
+
+newElement.addEventListener('click', () => {
+    flag = 'f';
+    count = 0;
+    for(let i of butt){
+        i.innerText = "";
+        i.disabled = false;
+        i.style.backgroundColor = "white";
+        i.addEventListener('mouseenter', () => {
+            i.style.backgroundColor = "#aec3b0";
+        });
+        i.addEventListener('mouseleave', () => {
+            i.style.backgroundColor = "white";
+        });
+    }
+    document.getElementById('player1').style.backgroundColor = "#aec3b0";
+    document.getElementById('player1').style.color = "#124559";
+    document.getElementById('player2').style.color = "#124559";
+    document.getElementById('player2').style.backgroundColor = "#aec3b0";
+    turn = 1;
+    turn0 = 1;
+    document.getElementById('player1').style.borderColor = "#FFD700";
+    document.getElementById('player2').style.borderColor = "#124559";
+    document.getElementById('Ban').style.display = "none";
 });
